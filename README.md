@@ -1,12 +1,28 @@
 # Leetcode-Data-Structures-Algorithms
 
-**Part 1: Data Structures (01 - 08)**
+## Part 1: Data Structures 
+- 01 Array
+- 02 Linked List
+- 03 Stack and Queue
+- 04 Hash Table
+- 05 Tree
+- 06 Heap
+- 07 Graph
+- 08 String
 
-**Part 2: Algorithms (09 - 18)**
+## Part 2: Algorithms
+- 09 Two pointers
+- 10 Binary Search
+- 11 Divide and Conquer
+- 12 BFS and DFS
+- 13 Backtrack
+- 14 Sliding Window
+- 15 Dynammic Programming
+- 16 Greedy Algorithm
+- 17 Math
+- 18 Bit Manipulation
 
-
-**Reference:**
-
+## Reference:
 [1] https://leetcode.com/problemset/all/
 
 [2] https://www.youtube.com/user/xxfflower
