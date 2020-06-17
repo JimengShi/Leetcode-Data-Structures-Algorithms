@@ -1,4 +1,4 @@
-# Method 1: Dynammic programming
+# Method 1: Dynammic programming, similar with Problem 322
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
         dp = [0] * (amount + 1)
@@ -14,7 +14,7 @@ class Solution:
 
 
 
-# Method 2: dfs
+# Method 2: dfs, similar with Problem 39
 class Solution(object):
     def change(self, amount, coins):
         if len(coins) == 0 and amount == 0:
@@ -23,16 +23,15 @@ class Solution(object):
             return 0
 
         coins.sort()
-        path = []                                   # 在遍历的过程中记录路径，一般而言它是一个栈
+        path = []                                    # 在遍历的过程中记录路径，一般而言它是一个栈
         res = []
         
-        self.dfs(coins, 0, path, res, amount)       # 注意要传入 size ，在 range 中， size 取不到
+        self.dfs(coins, 0, path, res, amount)        # 注意要传入 size ，在 range 中， size 取不到
         return len(res)
 
     def dfs(self, coins, begin, path, res, amount):
-        # 先写递归终止的情况
         if amount == 0:
-            res.append(path[:])         # Python 中可变对象是引用传递，因此将当前 path 里的值拷贝出来或者使用 path.copy()
+            res.append(path[:])                      # Python 中可变对象是引用传递，因此拷贝出 path 里的值
 
         for index in range(begin, len(coins)):
             residue = amount - coins[index]
