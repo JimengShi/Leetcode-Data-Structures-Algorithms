@@ -8,7 +8,7 @@ class Solution:
         if len(prices) == 1: 
             return 0
         
-        # (1) only return positive daily profit
+        # (1) greedy: accumulate positive daily profit
         profit = [] 
         for i in range(1, len(prices)):
             profit.append(max(0, prices[i] - prices[i-1]))
@@ -19,13 +19,17 @@ class Solution:
 # Time: O(n)
 # Space: O(1)
     
-    
+
 class Solution(object):
     def maxProfit(self, prices):
+        if len(prices) < 2:
+            return 0
+
         res = 0
         for i in range(len(prices)-1):
-            if 0 < prices[i+1]- prices[i]:
-                res += prices[i+1]- prices[i]
+            if 0 < prices[i+1] - prices[i]:
+                res += prices[i+1] - prices[i]
+                
         return res
     
 # Time: O(n)
