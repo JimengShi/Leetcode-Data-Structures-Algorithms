@@ -27,8 +27,10 @@
 
 [2] https://www.youtube.com/user/xxfflower
 
-[3] https://www.youtube.com/channel/UCRCqgMdsAHK3yfvW4en6JpA
+[3] https://github.com/labuladong/fucking-algorithm
 
-[4] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
+[4] https://www.youtube.com/channel/UCRCqgMdsAHK3yfvW4en6JpA
 
-[5] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
+[5] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
+
+[6] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
