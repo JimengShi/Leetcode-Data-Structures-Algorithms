@@ -44,7 +44,7 @@ class Solution:
         
         # (1) intialize the queue and find the max of the first 3 element
         queue = []
-        for i in range(k):                             # [1 3 -1] -3 5 3 6 7
+        for i in range(k):                             
             while queue and queue[-1][0] <= nums[i]:   # (1.1) remove any elements that < current num
                 queue.pop()
             queue.append((nums[i], i))                 # (1.2) else append it: queue = [3, -1]
@@ -53,14 +53,14 @@ class Solution:
         # (2) traverse from the index k
         r = k                                          
         while r < len(nums):
-            if r - queue[0][1] >= k:                   # (2.2) remove 1st ele if it's out of window
+            if r - queue[0][1] >= k:                   # (2.1) remove 1st ele if it's out of window
                 queue.pop(0)
 
-            while queue and queue[-1][0] <= nums[r]:   # (2.3) remove any elements that < current num
+            while queue and queue[-1][0] <= nums[r]:   # (2.2) remove any elements that < current num
                 queue.pop()
-            queue.append((nums[r], r))                 # (2.4) else append it: queue = [3, -1, -3]
+            queue.append((nums[r], r))                 # (2.3) else append it: queue = [3, -1, -3]
 
-            result.append(queue[0][0])                 # (2.5) update res: queue[0][0] always is max
+            result.append(queue[0][0])                 # (2.4) update res: queue[0][0] always is max
             r += 1
 
         # (3) return res
