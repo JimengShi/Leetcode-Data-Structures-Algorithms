@@ -1,3 +1,50 @@
+# Method 1: Brute Force
+class Solution:
+    def minSubArrayLen(self, s: int, nums: List[int]) -> int:
+        if not nums:
+            return 0
+        
+        n = len(nums)
+        ans = n + 1
+        for i in range(n):
+            total = 0
+            for j in range(i, n):
+                total += nums[j]
+                if total >= s:
+                    ans = min(ans, j - i + 1)
+                    break
+        
+        return 0 if ans == n + 1 else ans
+
+# Time: O(N^2)
+# Space: O(1)
+
+
+# Method 2: Binary Search
+class Solution:
+    def minSubArrayLen(self, s, nums):
+        if not nums:
+            return 0
+        
+        n = len(nums)
+        ans = n + 1
+        sums = [0]                                    # sums[i]: nums[0] 到 nums[i−1] 的元素和, 共 i 个元素
+        for i in range(n):
+            sums.append(sums[-1] + nums[i])           # sums = [0, 2, 5, 6, 8, 12, 15]
+        
+        for i in range(1, n + 1):
+            target = s + sums[i - 1]
+            bound = bisect.bisect_left(sums, target)
+            if bound != len(sums):
+                ans = min(ans, bound - i + 1)
+        
+        return 0 if ans == n + 1 else ans
+
+# Time: O(NlogN)
+# Space: O(N)
+    
+    
+# Method 3: Sliding window
 class Solution:
     def minSubArrayLen(self, s, nums):
         # (1) initialze l pointer, cur_sum, and ans: minimal length, assume it = len(nums)+1
@@ -15,30 +62,6 @@ class Solution:
         
         # (3) return 0 or the minimal length
         return 0 if ans == len(nums) + 1 else ans
-    
-# Time: O(N)
-# Space: O(1)
-
-
-class Solution:
-    def minSubArrayLen(self, s, nums):
-        # (1) initialze l pointer, cur_sum, and ans: minimal length, assume it = len(nums)+1
-        l = 0
-        cur_sum = 0
-        ans = float("inf")              
-        
-        # (2) traverse the nums and update the cur_num
-        for r in range(len(nums)):
-            cur_sum += nums[r]
-            while cur_sum >= s:
-                ans = min(ans, r - l + 1) # (2.1) update ans when cur_sum >= s
-                cur_sum -= nums[l]        # (2.2) remove the leftmost element
-                l += 1                    # (2.3) update l = l + 1
-        
-        # (3) return 0 or the minimal length
-        if ans > len(nums):
-            return 0
-        return res
     
 # Time: O(N)
 # Space: O(1)

@@ -30,6 +30,6 @@ class Solution:
         # (3) return max_len
         return max_len
 
-# Time: O(N)
-# Space: O(N)
+# Time: O(N), since traverse once.
+# Space: O(N) for set.
 # Note: (2.1) must be in front of (2.2) because we need to judge if the letter is a new one

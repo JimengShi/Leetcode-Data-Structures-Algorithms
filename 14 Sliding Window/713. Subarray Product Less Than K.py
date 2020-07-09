@@ -34,6 +34,8 @@ class Solution:
                 prod /= nums[left]
                 left += 1
             ans += right - left + 1
+
+        # (3) return result
         return ans
 
 # Time: O(N), where N is the length of nums. left can only be incremented at most N times.

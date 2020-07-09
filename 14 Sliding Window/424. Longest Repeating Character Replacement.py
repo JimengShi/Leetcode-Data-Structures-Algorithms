@@ -17,7 +17,7 @@ class Solution:
         
         # (2) traverse the string s
         for right in range(len(s)):
-            seen[ord(s[left])-ord('A')] += 1         # (2.1) record all letters in string
+            seen[ord(s[right])-ord('A')] += 1         # (2.1) record all letters in string
             
             # window size - no. of most frequent element = how many elements needed to be replaced (5-3=2 )
             while right - left + 1 - max(seen) > k:  

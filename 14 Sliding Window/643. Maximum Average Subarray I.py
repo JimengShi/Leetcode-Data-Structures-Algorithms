@@ -18,7 +18,7 @@ class Solution:
         # (4) return result
         return moving_sum / float(k)
     
-# [1,12,-5,-6,50,3], k = 4
+#    [1, 12,-5,-6, 50, 3], k = 4
 # [0, 1]
 # [0, 1, 13]
 # [0, 1, 13, 8]

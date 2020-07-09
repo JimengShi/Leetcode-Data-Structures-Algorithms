@@ -12,27 +12,26 @@ class Solution(object):
         res = ""
         
         # (2) traverse the string S 
-        while r < len(s):    
+        # while r < len(s):    
+        for r in range(len(s)):
             # (2.1) look for a window includng string T
-            if lookup[s[r]] > 0:  # lookup = {'A': 0, 'B': 0, 'C': 0}
-                missing -= 1      # idx= 0 1 2 3 4 5 6 7 8 9 10 11 12
-            lookup[s[r]] -= 1     # S = "A D O B E C O D E B A  N  C", T = "A B C"
-            r += 1                #      l           r 
-            
+            if lookup[s[r]] > 0:        # lookup = {'A': 0, 'B': 0, 'C': 0}
+                missing -= 1            # idx= 0 1 2 3 4 5 6 7 8 9 10 11 12
+            lookup[s[r]] -= 1           # S = "A D O B E C O D E B A  N  C", T = "A B C"
+                                        #      l         r 
             # (2.2) already find a window includng string T and optimize the window
             while missing == 0:
-                # print the window
-                if min_len > r - l:   # lookup = {'A': 0, 'B': 0, 'C': 0}
-                    min_len = r - l   # min_len = r - l = 6 - 0 = 6
-                    res = s[l:r]      # res = s[l:r] = [A D O B E C]
-                
+                if r-l+1 < min_len:     # lookup = {'A': 0, 'B': 0, 'C': 0}
+                    min_len = r-l+1     # min_len = r-l+1 = 6-0+1 = 6
+                    res = s[l:r+1]      # res = s[l:r] = [A D O B E C]
+
                 if lookup[s[l]] == 0: 
                     missing += 1
                 lookup[s[l]] += 1
                 
-                l += 1                # greedy minimize the window size
+                l += 1                  # greedy minimize the window size
         
-        # return res
+        # (3) return res
         return res
     
 # Input: S = "ADOBECODEBANC", T = "ABC"
