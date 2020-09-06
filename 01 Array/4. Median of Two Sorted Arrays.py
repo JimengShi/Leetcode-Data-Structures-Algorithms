@@ -1,31 +1,49 @@
+# There are two sorted arrays nums1 and nums2 of size m and n respectively.
+
+# Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+
+# You may assume nums1 and nums2 cannot be both empty.
+
+# Example 1:
+# nums1 = [1, 3]
+# nums2 = [2]
+# The median is 2.0
+
+# Example 2:
+# nums1 = [1, 2]
+# nums2 = [3, 4]
+# The median is (2 + 3)/2 = 2.5
+
+
+
 # Method 1: merge two array
-# class Solution:
-#     def findMedianSortedArrays(self, A: List[int], B: List[int]) -> float:
-#         mergedArray = self.merge(A, B)
-#         n = len(mergedArray)
+class Solution:
+    def findMedianSortedArrays(self, A: List[int], B: List[int]) -> float:
+        mergedArray = self.merge(A, B)
+        n = len(mergedArray)
         
-#         if n % 2 == 1:
-#             return mergedArray[n//2]
-#         else:
-#             return (mergedArray[(n-1)//2]+mergedArray[n//2]) / 2
+        if n % 2 == 1:
+            return mergedArray[n//2]
+        else:
+            return (mergedArray[(n-1)//2]+mergedArray[n//2]) / 2
         
-#     def merge(self, left, right):
-#         result = []
-#         i = 0
-#         j = 0
+    def merge(self, left, right):
+        result = []
+        i = 0
+        j = 0
 
-#         while i < len(left) and j < len(right):
-#             if left[i] <= right[j]:
-#                 result.append(left[i])
-#                 i += 1
-#             else:
-#                 result.append(right[j])
-#                 j += 1
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                result.append(left[i])
+                i += 1
+            else:
+                result.append(right[j])
+                j += 1
 
-#         result += left[i:]
-#         result += right[j:]
+        result += left[i:]
+        result += right[j:]
 
-#         return result
+        return result
     
 # Time: O(m+n)
 # Space: O(m+n)
