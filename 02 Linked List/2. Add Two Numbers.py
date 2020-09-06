@@ -12,7 +12,7 @@ class Solution(object):
         
         # (2) addition operation
         tempsum = 0
-        while l1 or l2 or tempsum:                                         # while l1 or l2 or tempsum
+        while l1 or l2 or tempsum:         # while l1 or l2 or tempsum
             if l1:
                 tempsum += l1.val
                 l1 = l1.next

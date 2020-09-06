@@ -7,23 +7,24 @@
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         dummy = ListNode(0)
-        dummy.next = head
         pre = dummy
+        dummy.next = head
+        curr = head
         
-        while head and head.next:
-            if head.val == head.next.val:
+        while curr and curr.next:
+            if curr.val == curr.next.val:
                 # move head one step if head.val == head.next.val
-                while head and head.next and head.val == head.next.val:  
-                    head = head.next
-                head = head.next
-                pre.next = head
+                while curr and curr.next and curr.val == curr.next.val:  
+                    curr = curr.next
+                curr = curr.next
+                pre.next = curr
             else:
-                pre = pre.next
-                head = head.next
+                pre = curr
+                curr = curr.next
         return dummy.next
 
 # Time: O(N)
-# Space: (1)
+# Space: O(1)
 
 
 class Solution:

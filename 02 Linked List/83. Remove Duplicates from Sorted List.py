@@ -6,37 +6,24 @@
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
+        # (0) edge case
         if not head or not head.next:
             return head
 
-        node = head
+        # (1) initialize dummy and curr
+        dummy = ListNode(1)
+        dummy.next = head
+        curr = head
 
-        while node.next:
-            if node.val == node.next.val:
-                node.next = node.next.next
+        # (2) traverse
+        while curr.next:
+            if curr.val == curr.next.val:
+                curr.next = curr.next.next
             else:
-                node = node.next
+                curr = curr.next
 
-        return head
+        # (3) return result
+        return dummy.next
 
-# Time: O(N)
-# Space: O(1)
-
-class Solution:
-    def deleteDuplicates(self, head: ListNode) -> ListNode:
-        if not head or not head.next:
-            return head
-
-        node = head
-        nxt = node.next
-        while nxt:
-            if node.val == nxt.val:
-                node.next = nxt.next
-                nxt = nxt.next
-            else:
-                node = nxt
-
-        return head
-    
 # Time: O(N)
 # Space: O(1)
