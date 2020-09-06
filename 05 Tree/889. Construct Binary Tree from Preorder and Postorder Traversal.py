@@ -1,3 +1,11 @@
+# Return any binary tree that matches the given preorder and postorder traversals.
+# Values in the traversals pre and post are distinct positive integers.
+
+# Example 1:
+# Input: pre = [1,2,4,5,3,6,7], post = [4,5,2,6,7,3,1]
+# Output: [1,2,3,4,5,6,7]
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -32,8 +40,10 @@ class Solution:
 # idx  =  0  1  2  3  4  5  6
 # pre  =  1 [2  4  5] 3  6  7
 #            i
-# post = [4  5  2] 6, 7, 3, 1]
+# post = [4  5  2] 6, 7, 3, 1
 #               j
+#  pre[i]: the second number of pre, the root of left subtree
+# post[j]: the last element of left subtree
 
 
 # iterative

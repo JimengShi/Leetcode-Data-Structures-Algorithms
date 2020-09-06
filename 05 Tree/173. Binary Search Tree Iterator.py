@@ -5,17 +5,24 @@
 #         self.left = None
 #         self.right = None
 
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
 class BSTIterator(object):
     def __init__(self, root):
         self.traverse = []
-        def inOrderTraversal(node):
-            if node is not None:
-                inOrderTraversal(node.left)
-                self.traverse.append(node.val)
-                inOrderTraversal(node.right)
-
-        inOrderTraversal(root)
-
+        self.inOrderTraversal(root)
+        
+    def inOrderTraversal(self, node):
+        if not node:
+            return
+        self.inOrderTraversal(node.left)
+        self.traverse.append(node.val)
+        self.inOrderTraversal(node.right)
 
     def next(self):
         """
@@ -24,7 +31,6 @@ class BSTIterator(object):
         """
         if self.hasNext():
             return self.traverse.pop(0)
-        
 
     def hasNext(self):
         """

@@ -1,3 +1,13 @@
+# Given a binary tree, return the vertical order traversal of its nodes values.
+# For each node at position (X, Y), its left and right children respectively will be at positions (X-1, Y-1) and (X+1, Y-1).
+
+# Running a vertical line from X = -infinity to X = +infinity, whenever the vertical line touches some nodes, 
+# we report the values of the nodes in order from top to bottom (decreasing Y coordinates).
+
+# If two nodes have the same position, then the value of the node that is reported first is the value that is smaller.
+# Return an list of non-empty reports in order of X coordinate.  Every report will have a list of values of nodes.
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -8,28 +18,31 @@
 # Method 1: BFS with sorting all nodes
 class Solution:
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:
-        # step 1). construct the global node list, with the coordinates
-        node_list = []
+        # (0) edge case
+        if root is None:
+            return []
+        
+        # (1) initialize
+        columnTable = defaultdict(list)
         queue = deque([(root, 0, 0)])
+
+        # (2) BFS traversal
         while queue:
             node, row, column = queue.popleft()
-            if node is not None:
-                node_list.append((column, row, node.val))
-                queue.append((node.left, row + 1, column - 1))
-                queue.append((node.right, row + 1, column + 1))
+            if node:
+                columnTable[column].append((row, node.val))
+                if node.left:
+                    queue.append((node.left, row+1, column-1))
+                if node.right:
+                    queue.append((node.right, row+1, column+1))
 
-        # step 2). sort the global node list, according to the coordinates
-        node_list.sort()
+        # (3) extract the values from the columnTable
+        # (3) for each column, first sort by 'row', then by 'value', in ascending order
+        res = []
+        for col in sorted(columnTable.keys()):
+            res.append([val for row, val in sorted(columnTable[col])])
+        return res
 
-        # step 3). retrieve the sorted results partitioned by the column index
-        res = {}
-        for column, row, value in node_list:
-            if column in res:
-                res[column].append(value)
-            else:
-                res[column] = [value]
-        return res.values()
-    
 # Time: O(N) for BFS traversal, O(NlogN) for sorting
 # Space: O(N)
 
@@ -41,10 +54,12 @@ class Solution:
         if root is None:
             return []
         
-        # (1) BFS traversal
+        # (1) initialize
         columnTable = defaultdict(list)
         min_column = max_column = 0
         queue = deque([(root, 0, 0)])
+
+        # (2) BFS traversal
         while queue:
             node, row, column = queue.popleft()
             if node is not None:
@@ -54,8 +69,8 @@ class Solution:
                 queue.append((node.left, row + 1, column - 1))
                 queue.append((node.right, row + 1, column + 1))
 
-        # (2) extract the values from the columnTable
-        # (2) for each column, first sort by 'row', then by 'value', in ascending order
+        # (3) extract the values from the columnTable
+        # (3) for each column, first sort by 'row', then by 'value', in ascending order
         res = []
         for col in range(min_column, max_column + 1):
             res.append([val for row, val in sorted(columnTable[col])])

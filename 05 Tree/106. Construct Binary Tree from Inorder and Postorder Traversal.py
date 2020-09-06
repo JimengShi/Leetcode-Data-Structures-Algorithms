@@ -1,3 +1,18 @@
+# Given inorder and postorder traversal of a tree, construct the binary tree.
+# Note: You may assume that duplicates do not exist in the tree.
+
+# For example, given
+# postorder = [9,15,7,20,3]
+# inorder = [9,3,15,20,7]
+
+# Return the following binary tree:
+#     3
+#    / \
+#   9  20
+#     /  \
+#    15   7
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -31,32 +46,30 @@ class Solution:
 # iteratively
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
-    	# (1) construct hashmap to save inorder index
+        if not inorder:
+            return None
+                
+        # (1) construct hashmap to save inorder index
         idx = {}                            # idx = {9: 0, 3: 1, 15: 2, 20: 3, 7: 4}
         for i, val in enumerate(inorder):
             idx[val] = i 
-			
-	    # (2) Iterate over preorder and construct the tree 
-        stack = []
-        root = None
-        for val in postorder[::-1]:                # postorder = [9,15,7,20,3]
-            # (2.1) determine root in preorder and save it in stack
-            if not root:
-                root = TreeNode(val)
-                stack.append(root)
             
-            # (2.2) determine node goes to left or right if it's not root
-            else:
-                cur_node = TreeNode(val)                             # (2.2.1) save cur_node as TreeNode
-                if idx[val] > idx[stack[-1].val]:                   
-                    stack[-1].right = cur_node                       # (2.2.2) go to left or right
-                else:                                               
-                    while stack and idx[val] < idx[stack[-1].val]:
-                        temp = stack.pop()
-                    temp.left = cur_node
-                stack.append(cur_node)                               # (2.2.3) save cur_node in stack
+        # (2) Iterate over preorder and construct the tree
+        root = TreeNode(postorder[-1])
+        stack = [root]
+        
+        # (3) Iterate preorder from the last number to 1st and construct the tree
+        for val in postorder[:-1][::-1]:                        # postorder = [9,15,7,20,3]
+            curr_node = TreeNode(val)
+            if idx[val] > idx[stack[-1].val]:                   
+                stack[-1].right = curr_node
+            else:                                               
+                while stack and idx[val] < idx[stack[-1].val]:
+                    temp = stack.pop()
+                temp.left = curr_node
+            stack.append(curr_node)
                 
-        # (3) return output
+        # (4) return output
         return root
     
 # Time: O(n), traverse once

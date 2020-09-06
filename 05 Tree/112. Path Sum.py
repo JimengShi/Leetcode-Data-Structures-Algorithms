@@ -1,3 +1,17 @@
+# Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up 
+# all the values along the path equals the given sum. Note: A leaf is a node with no children.
+
+# Example: Given the below binary tree and sum = 22,
+#       5
+#      / \
+#     4   8
+#    /   / \
+#   11  13  4
+#  /  \      \
+# 7    2      1
+# return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
+
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -12,13 +26,12 @@ class Solution(object):
         if not root:                          
             return False
         
-        # (1) sum = sum - root and check if reach leaf node
-        sum -= root.val                                
-        if not root.left and not root.right:
-            return sum == 0
+        # (1) sum = sum - root and check if reach leaf node                              
+        if not root.left and not root.right and sum == root.val:
+            return True
         
         # (3) recursively call function for each child node
-        return self.hasPathSum(root.left, sum) or self.hasPathSum(root.right, sum)
+        return self.hasPathSum(root.left, sum-root.val) or self.hasPathSum(root.right, sum-root.val)
     
 # Time: O(N): access N node
 # Space: O(N) when the tree is unbalanced, O(h=logN) when the tree is balanced
@@ -32,17 +45,17 @@ class Solution(object):
             return False
         
         # (1) save root and target in stack
-        stack = [(root, sum-root.val)]
+        stack = [(root, sum)]
         
         # (2) pop and append elements
         while stack:
-            node, cur_sum = stack.pop()
-            if not node.left and not node.right and cur_sum == 0:   # (2.1) check when it's leaf node 
+            node, curr_sum = stack.pop()
+            if not node.left and not node.right and node.val == curr_sum:   # (2.1) check when it's leaf node 
                 return True
             if node.right:                                          # (2.2) keep append if it's not leaf
-                stack.append((node.right, cur_sum-node.right.val))
+                stack.append((node.right, curr_sum-node.val))
             if node.left:
-                stack.append((node.left, cur_sum-node.left.val))
+                stack.append((node.left, curr_sum-node.val))
                 
         # (3) return False
         return False

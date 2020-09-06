@@ -1,3 +1,27 @@
+# Given a binary tree, determine if it is height-balanced.
+# For this problem, a height-balanced binary tree is defined as:
+# a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+
+# Example 1:
+# Given the following tree [3,9,20,null,null,15,7]:
+#     3
+#    / \
+#   9  20
+#     /  \
+#    15   7
+# Return true.
+
+# Example 2:
+# Given the following tree [1,2,2,3,3,null,null,4,4]:
+#        1
+#       / \
+#      2   2
+#     / \
+#    3   3
+#   / \
+#  4   4
+# Return false.
+
 # class TreeNode(object):
 #     def __init__(self, x):
 #         self.val = x
@@ -7,7 +31,7 @@
 class Solution(object):
     def isBalanced(self, root):
         # (0) edge case
-        if root == None:
+        if not root:
             return True
         
         # (1) get the left_depth and right_depth
@@ -19,9 +43,9 @@ class Solution(object):
     
 
     def depth(self, node):
-        if node == None:     # necessary, which can not be deleted
+        if not node:     # necessary, which can not be deleted
             return 0
-        return max( self.depth(node.left), self.depth(node.right) ) + 1
+        return 1 + max(self.depth(node.left), self.depth(node.right))
     
-# Time: O(logN)
-# Space: O(1)
+# Time: O(N)
+# Space: O(N)

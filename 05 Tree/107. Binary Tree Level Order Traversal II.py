@@ -6,23 +6,23 @@
 #         self.right = None
 
 
-# iteratively
+# Method 1: iteratively
 class Solution:
     def levelOrderBottom(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return root
-        stack = [root]
+        queue = [root]
         res = []
-        while stack:
-            res.append([i.val for i in stack])
+        while queue:
+            res.append([i.val for i in queue])
 
             tem = []
-            for i in stack:
+            for i in queue:
                 if i.left:
                     tem.append(i.left)
                 if i.right:
                     tem.append(i.right)
-            stack = tem[:]
+            queue = tem[:]
             
         return res[::-1]
 
@@ -30,7 +30,7 @@ class Solution:
 # Space: O(N) to keep the output structure which contains N node values.
 
     
-# recursively
+# Method 2: recursively
 class Solution(object):
     def levelOrderBottom(self, root):
         res = []                           # (1) initialize an empty list

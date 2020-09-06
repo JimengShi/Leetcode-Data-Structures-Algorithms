@@ -1,3 +1,15 @@
+# Given a binary tree, return the inorder traversal of its nodes' values.
+
+# Example:
+# Input: [1,null,2,3]
+#    1
+#     \
+#      2
+#     /
+#    3
+# Output: [1,3,2]
+
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, x):
@@ -5,16 +17,14 @@
 #         self.left = None
 #         self.right = None
 
-# iteratively
+# Method 1: iteratively
 class Solution(object):
     def inorderTraversal(self, root):
         # (1) initialize the stack and traversal
-        stack = []                          
         res = []
+        stack = []                          
         
         # (2) start traversing
-        if root is None:
-            return
         while stack or root:
             if root:
                 stack.append(root)          # (2.1) save leftmoset nodes in stack temporarily
@@ -31,7 +41,7 @@ class Solution(object):
 # Space:O(n), in the average case it's O(logn) where n is number of nodes.
 
     
-# recursively
+# Method 2: recursively
 class Solution(object):    
     def inorderTraversal(self, root):
         self.res = []
@@ -39,12 +49,11 @@ class Solution(object):
         return self.res
     
     def helper(self, node):
-        if node is None:
+        if not node:
             return
-        if node:
-            self.helper(node.left)     # (1) res.append(root.left)  -->  left part
-            self.res.append(node.val)  # (2) res.append(root)       -->  root itself   
-            self.helper(node.right)    # (3) res.append(root.right) -->  right part
+        self.helper(node.left)     # (1) res.append(root.left)  -->  left part
+        self.res.append(node.val)  # (2) res.append(root)       -->  root itself   
+        self.helper(node.right)    # (3) res.append(root.right) -->  right part
             
 # Time: O(n) because the recursive function is T(n) = 2T(n/2) + 1.
 # Space:O(n), in the average case it's O(logn) where n is number of nodes.

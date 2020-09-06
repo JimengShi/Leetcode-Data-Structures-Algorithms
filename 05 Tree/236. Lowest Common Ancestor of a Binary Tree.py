@@ -6,7 +6,7 @@
 #         self.right = None
 
 
-# recursively
+# Method 1: recursively
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
         # Edge/Condition
@@ -29,33 +29,37 @@ class Solution(object):
 
 # Time:  O(n)
 # Space: O(n)
+# Reference: https://www.youtube.com/watch?v=WqNULaUhPCc&t=319s
 
 
-# iteratively
+# Method 2: iteratively
 class Solution:
-    def lowestCommonAncestor(self, root, p, q):     
+    def lowestCommonAncestor(self, root, p, q):
+        # (0) edge case
+        if not root:
+            return None
+
         # (1) Start from the root node and traverse the tree
         stack = [root]                                  
         parent = {root: None}  # Dictionary for parent pointers
         
-        # (2) Iterate until we find both the nodes p and q, keep saving the parent pointers in a dictionary
+        # (2) Iterate until we find both the nodes p and q, save p and q parent in a dictionary
         while p not in parent or q not in parent:       
             node = stack.pop()
-            if node.left:                     
-                parent[node.left] = node
+            if node.left:
                 stack.append(node.left)
+                parent[node.left] = node
             if node.right:
-                parent[node.right] = node
                 stack.append(node.right)
-                
-        ancestors = set()       # Ancestors set() for node p.
+                parent[node.right] = node
 
         # (3) Once found both p and q, get all the ancestors for p using parent dictionary and add to a set
-        while p:
+        ancestors = set()
+        while p:                      # because {root:None}
             ancestors.add(p)
             p = parent[p]
             
-        # (4) trying ancestors for q, if q's ancester appears in p's ancestor set(), that is lowest common ancestor
+        # (4) try q ancestor, if q's ancester appears in p's ancestor set(), that is lowest common ancestor
         while q not in ancestors:
             q = parent[q]
         return q
