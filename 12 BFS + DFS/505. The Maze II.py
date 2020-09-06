@@ -21,14 +21,14 @@ class Solution:
                 next_x = x
                 next_y = y
                 
-                l = 0
+                temp = 0
                 while 0 <= next_x + dx < m and 0 <= next_y + dy < n and maze[next_x + dx][next_y + dy] == 0:
                     next_x += dx
                     next_y += dy
-                    l += 1
+                    temp += 1
                     
                 if (next_x, next_y) not in visited:
-                    heapq.heappush(min_heap, (cur_dist + l, next_x, next_y))
+                    heapq.heappush(min_heap, (cur_dist + temp, next_x, next_y))
         
         return -1
     
