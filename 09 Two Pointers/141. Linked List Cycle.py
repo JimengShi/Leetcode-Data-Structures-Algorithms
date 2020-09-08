@@ -7,7 +7,31 @@
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
         # (0) edge case
-        if not head:
+        if not head or not head.next:
+            return False
+        
+        # (1) initialize two pointers
+        slow = fast = head
+        
+        # (2) start traverse linked list
+        while fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast == slow:            # fast pointer can chase (meet) flow pointer
+                return True
+        
+        # (3) otherwise return False
+        return False
+
+# 快慢双指针追赶碰撞解法
+# Time: O(N)
+# Space: O(1) is used by slow and fast pointers
+
+
+class Solution:
+    def hasCycle(self, head: ListNode) -> bool:
+        # (0) edge case
+        if not head or not head.next:
             return False
         
         # (1) initialize two pointers
@@ -17,13 +41,12 @@ class Solution:
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-            
-            if fast is slow:            # fast pointer can chase (meet) flow pointer
+            if fast == slow:            # fast pointer can chase (meet) flow pointer
                 return True
         
         # (3) otherwise return False
         return False
 
 # 快慢双指针追赶碰撞解法
-# Time: O(n)
+# Time: O(N)
 # Space: O(1) is used by slow and fast pointers

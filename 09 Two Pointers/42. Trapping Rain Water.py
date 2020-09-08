@@ -2,7 +2,7 @@
 class Solution:
     def trap(self, height: List[int]) -> int:
         ans = 0
-        for i in range(1,len(height)-1): 
+        for i in range(1, len(height)-1): 
             max_left = max(height[:i])
             max_right = max(height[i+1:])
             potential = min(max_left, max_right) - height[i]
@@ -22,13 +22,13 @@ class Solution:
         
         # (1) initialize the answer and two pointers
         left = 0
-        right = len(height) - 1
+        right = len(height)-1
         maxleft = height[0]
-        maxright = height[len(height) - 1]
+        maxright = height[len(height)-1]
         ans = 0
 
         # (2) traverse the height array from left and right at the same time
-        while left <= right:
+        while left < right:
             maxleft = max(height[left], maxleft)
             maxright = max(height[right], maxright)
             

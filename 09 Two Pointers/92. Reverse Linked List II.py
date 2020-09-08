@@ -16,26 +16,25 @@ class Solution:
         pre = dummy
         
         # (2) pre moves m-1 steps from dummy node to (m-1)th node
-        for i in range(m - 1):
+        for i in range(m-1):
             pre = pre.next
 
         # (3) reverse the [m, n] nodes
-        result = None
-        current = pre.next
-        for i in range(n - m + 1):
-            nxt = current.next
-            current.next = result
-            
-            result = current
-            current = nxt
+        res = None
+        curr = pre.next
+        for i in range(n-m+1):
+            nxt = curr.next
+            curr.next = res
+            res = curr
+            curr = nxt
         
         # (4) adjust the final connections by pre.next and pre.next.next
-        pre.next.next = current
-        pre.next = result
+        pre.next.next = curr
+        pre.next = res
 
         # (5) return the whole reformed list
         return dummy.next
     
 
-# Time: O(N)
-# Space: O(1)
+# Time: O(N) since we process each of the nodes at most once 
+# Space: O(1) in-place

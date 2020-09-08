@@ -27,7 +27,7 @@ class Solution:
             return 0
         
         # (1) initialize two pointers i and j 
-        # (1) i keeps length, j traverses array
+        # (1) i keeps length and the position, j traverses array
         i = 0
         for j in range(1, len(nums)):
             if nums[i] != nums[j]:

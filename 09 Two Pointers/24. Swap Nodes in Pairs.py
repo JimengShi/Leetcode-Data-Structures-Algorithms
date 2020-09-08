@@ -19,7 +19,7 @@ class Solution:
         while curr.next and curr.next.next:
             p1 = curr.next
             p2 = curr.next.next
-            curr.next  = p2         # connect cur and cur.next, pay attention to the order here
+            curr.next = p2          # connect cur and cur.next, pay attention to the order here
             p1.next = p2.next       # connect p1 and p1.next, pay attention to the order here
             p2.next = p1            # connect p2 and p2.next, pay attention to the order here
             
@@ -31,5 +31,3 @@ class Solution:
 
 # Time: O(N) where N is the size of the linked list.
 # Space: O(1).
-
-

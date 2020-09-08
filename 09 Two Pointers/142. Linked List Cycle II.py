@@ -7,7 +7,38 @@
 class Solution(object):
     def detectCycle(self, head):
         # (0) edge case
-        if head is None:
+        if not head or not head.next:
+            return None
+        
+        # (1) initialize two pointers and try the first meet
+        slow, fast = head, head
+        while fast.next and fast.next.next:
+            fast = fast.next.next
+            slow = slow.next
+            if slow == fast:
+                break
+
+        # (2) a single linked list without circle
+        if fast.next is None or fast.next.next is None:   
+            return None
+        
+        # (3) try the second meet
+        fast = head                             # set fast at the head node
+        while fast != slow:
+            fast = fast.next
+            slow = slow.next
+
+        # (4) return the node slow pointer is pointing to
+        return slow
+     
+# Time: O(N)
+# Space: O(1)
+
+
+class Solution(object):
+    def detectCycle(self, head):
+        # (0) edge case
+        if not head or not head.next:
             return None
         
         # (1) initialize two pointers and try the first meet
@@ -32,7 +63,7 @@ class Solution(object):
         return slow
     
     
-# Time: O(n)
+# Time: O(N)
 # Space: O(1)
 
 # Reference: https://leetcode-cn.com/problems/linked-list-cycle-ii/solution/linked-list-cycle-ii-kuai-man-zhi-zhen-shuang-zhi-/

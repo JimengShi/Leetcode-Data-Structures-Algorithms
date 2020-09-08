@@ -4,7 +4,7 @@ class Solution:
         ans = 0
         for i in range(len(height)):
             for j in range(i+1, len(height)):
-                ans = max(ans, min(height[i], height[j]) * (j - i))
+                ans = max(ans, min(height[i],height[j])*(j-i))
         return ans
 
 # Time: O(N^2)
@@ -17,7 +17,7 @@ class Solution:
         # (1) initialize the ans and two pointers
         ans = 0
         left = 0
-        right = len(height) - 1
+        right = len(height)-1
         
         # (2) compute the answer area as big as possible (greedy)
         while left < right:
