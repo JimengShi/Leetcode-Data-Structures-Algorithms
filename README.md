@@ -22,11 +22,6 @@
 - 17 Math
 - 18 Bit Manipulation
 
-| Question |    Solution   |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-
 
 ## Reference:
 [1] https://leetcode.com/problemset/all/
