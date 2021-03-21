@@ -10,7 +10,7 @@
 
 # Type 2: Unchangeable Window Size
 
-| Question |    Solution   |  Time / Space |
+| Question |    Solution   |  Difficulty |
 |----------|:-------------|:------:|
 | [Leecode](https://leetcode.com/problems/sliding-window-maximum/)    |  [239. Sliding Window Maximum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/239.%20Sliding%20Window%20Maximum.py) | Hard |
 | [Leecode](https://leetcode.com/problems/sliding-window-median/)    |  [480. Sliding Window Median](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/480.%20Sliding%20Window%20Median.py) | Hard |
