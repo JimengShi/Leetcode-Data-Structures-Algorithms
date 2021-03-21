@@ -1,6 +1,6 @@
 # Type 1: Changeable Window Size
 **Python Template:**
-'''Python
+```Python
 class Solution:
     def functionName(self, s, k):
         l = 0
@@ -15,7 +15,7 @@ class Solution:
                 l += 1
             max_len = max(max_len, r-l+1)
         return max_len
-'''
+```
 
 | Question |    Solution   |  Difficulty |
 |----------|:-------------|:------:|
