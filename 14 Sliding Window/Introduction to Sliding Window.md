@@ -3,17 +3,22 @@
 ```Python
 class Solution:
     def functionName(self, s, k):
+        # (1) initialization
         l = 0
         count_dict = {}
         max_len = 0
+        
+        # (2) traverse the string or array to count
         for r in range(len(s)):
             count_dict[s[r]] = count_dict.get(s[r], 0) + 1
-            while window condition is not satisfied:
+            while window condition is not satisfied:          # (2.1) window condition is not satisfied
                 count_dict[s[l]] -= 1
                 if count_dict[s[l]] == 0:
                     del count_dict[s[l]]
                 l += 1
-            max_len = max(max_len, r-l+1)
+            max_len = max(max_len, r-l+1)                     # (2.2) window condition is satisfied
+            
+        # (3) return the result
         return max_len
 ```
 
