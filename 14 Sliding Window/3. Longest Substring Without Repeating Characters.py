@@ -12,24 +12,19 @@ class Solution:
         
         # (1) initialize the left pointer, cur_len and max_len, and maintain a set
         lookup = set()
-        left, cur_len, max_len = 0, 0, 0
+        l, max_len = 0, 0
         
         # (2) traverse the string to compare if letters are same with cur_len
         for r in range(len(s)):
-            cur_len += 1
-            while s[r] in lookup:       # (2.1) when the letter is in the set
-                lookup.remove(s[left])  # (2.1.1) remove the leftmost letter 
-                cur_len -= 1            # (2.1.2) update cur_len
-                left += 1               # (2.1.3) update l += 1
+            while s[r] in lookup:         # (2.1) when the letter is in the set
+                lookup.remove(s[l])       # (2.1.1) remove the leftmost letter 
+                l += 1                    # (2.1.2) update l += 1
             
-            lookup.add(s[r])            # (2.2) add the letter to the set if it is not in set
-            
-            if cur_len > max_len:       # (2.3) update max_len
-                max_len = cur_len
+            lookup.add(s[r])              # (2.2) add the letter to the set if it is not in set
+            max_len = max(max_len, r-l+1)
         
         # (3) return max_len
         return max_len
 
 # Time: O(N), since traverse once.
 # Space: O(N) for set.
-# Note: (2.1) must be in front of (2.2) because we need to judge if the letter is a new one
