@@ -29,7 +29,8 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/longest-repeating-character-replacement/)    |  [424. Longest Repeating Character Replacement](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/424.%20Longest%20Repeating%20Character%20Replacement.py) | Medium |
 | [Leecode](https://leetcode.com/problems/subarrays-with-k-different-integers/)    |  [992. Subarrays with K Different Integers](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/992.%20Subarrays%20with%20K%20Different%20Integers.py) | Hard |
 | [Leecode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)    |  [3. Longest Substring Without Repeating Characters](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/3.%20Longest%20Substring%20Without%20Repeating%20Characters.py) | Medium |
-
+| [Leecode](https://leetcode.com/problems/minimum-size-subarray-sum/)    |  [209. Minimum Size Subarray Sum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/209.%20Minimum%20Size%20Subarray%20Sum.py) | Medium |
+| [Leecode](https://leetcode.com/problems/subarray-product-less-than-k/)    |  [713. Subarray Product Less Than K](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
 
 
 # Type 2: Unchangeable Window Size
