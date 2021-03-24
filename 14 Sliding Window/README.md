@@ -34,10 +34,16 @@ class Solution:
 
 
 # Type 2: Unchangeable Window Size
-
 | Question |    Solution   |  Difficulty |
 |----------|:-------------|:------:|
 | [Leecode](https://leetcode.com/problems/sliding-window-maximum/)    |  [239. Sliding Window Maximum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/239.%20Sliding%20Window%20Maximum.py) | Hard |
 | [Leecode](https://leetcode.com/problems/sliding-window-median/)    |  [480. Sliding Window Median](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/480.%20Sliding%20Window%20Median.py) | Hard |
 | [Leecode](https://leetcode.com/problems/find-all-anagrams-in-a-string/)    |  [438. Find All Anagrams in a String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/438.%20Find%20All%20Anagrams%20in%20a%20String.py) | Medium |
 | [Leecode](https://leetcode.com/problems/permutation-in-string/)    |  [567. Permutation in String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/567.%20Permutation%20in%20String.py) | Medium |
+
+
+# Type 3: Type 3: Min Window Substring/Subsequence
+| Question |    Solution   |  Difficulty |
+|----------|:-------------|:------:|
+| [Leecode](https://leetcode.com/problems/minimum-window-substring/)    |  [76. Minimum Window Substring](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/76.%20Minimum%20Window%20Substring.py) | Hard |
+| [Leecode](https://leetcode.com/problems/minimum-window-subsequence/)    |  [727. Minimum Window Subsequence](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/727.%20Minimum%20Window%20Subsequence.py) | Hard |
