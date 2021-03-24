@@ -42,7 +42,7 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/permutation-in-string/)    |  [567. Permutation in String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/567.%20Permutation%20in%20String.py) | Medium |
 
 
-# Type 3: Type 3: Min Window Substring/Subsequence
+# Type 3: Minimum Window Substring/Subsequence
 | Question |    Solution   |  Difficulty |
 |----------|:-------------|:------:|
 | [Leecode](https://leetcode.com/problems/minimum-window-substring/)    |  [76. Minimum Window Substring](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/76.%20Minimum%20Window%20Substring.py) | Hard |
