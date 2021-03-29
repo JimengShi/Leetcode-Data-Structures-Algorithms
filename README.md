@@ -32,6 +32,8 @@
 
 [4] https://www.youtube.com/channel/UCRCqgMdsAHK3yfvW4en6JpA
 
-[5] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
+[5] https://books.halfrost.com/leetcode/ChapterOne/Data_Structure/
 
-[6] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
+[6] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
+
+[7] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
