@@ -28,14 +28,16 @@
 
 [2] https://www.youtube.com/user/xxfflower
 
-[3] https://github.com/labuladong/fucking-algorithm
+[3] https://github.com/MisterBooo/LeetCodeAnimation
 
-[4] https://www.youtube.com/channel/UCRCqgMdsAHK3yfvW4en6JpA
+[4] https://github.com/labuladong/fucking-algorithm
 
-[5] https://books.halfrost.com/leetcode/ChapterOne/Data_Structure/
+[5] https://www.youtube.com/channel/UCRCqgMdsAHK3yfvW4en6JpA
 
-[6] https://github.com/liweiwei1419/LeetCode-Solutions-in-Good-Style
+[6] https://books.halfrost.com/leetcode/ChapterOne/Data_Structure/
 
-[7] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
+[7] https://github.com/liweiwei1419/LeetCode-Solutions-in-Good-Style
 
-[8] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
+[8] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
+
+[9] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
