@@ -24,7 +24,7 @@
 
 
 ## Reference:
-[1] https://leetcode.com/problemset/all/
+[1] https://www.liwei.party/
 
 [2] https://www.youtube.com/user/xxfflower
 
