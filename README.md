@@ -40,4 +40,6 @@
 
 [8] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
 
-[9] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
+[9] https://www.liwei.party/2020/05/06/leetcode-algo/1143-longest-common-subsequence/
+
+[10] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
