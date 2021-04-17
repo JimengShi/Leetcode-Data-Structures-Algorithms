@@ -34,6 +34,8 @@
 
 [5] https://books.halfrost.com/leetcode/ChapterOne/Data_Structure/
 
-[6] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
+[6] https://github.com/liweiwei1419/LeetCode-Solutions-in-Good-Style
 
-[7] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
+[7] https://www.hackerearth.com/practice/data-structures/arrays/1-d/tutorial/
+
+[8] https://www.hackerearth.com/practice/algorithms/searching/linear-search/tutorial/
