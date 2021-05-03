@@ -31,6 +31,7 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/longest-substring-without-repeating-characters/)    |  [3. Longest Substring Without Repeating Characters](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/3.%20Longest%20Substring%20Without%20Repeating%20Characters.py) | Medium |
 | [Leecode](https://leetcode.com/problems/minimum-size-subarray-sum/)    |  [209. Minimum Size Subarray Sum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/209.%20Minimum%20Size%20Subarray%20Sum.py) | Medium |
 | [Leecode](https://leetcode.com/problems/subarray-product-less-than-k/)    |  [713. Subarray Product Less Than K](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
+| [Leecode](https://leetcode.com/problems/max-consecutive-ones-iii/)    |  [1004. Max Consecutive Ones III](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
 
 
 # Type 2: Unchangeable Window Size
@@ -39,7 +40,7 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/sliding-window-maximum/)    |  [239. Sliding Window Maximum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/239.%20Sliding%20Window%20Maximum.py) | Hard |
 | [Leecode](https://leetcode.com/problems/sliding-window-median/)    |  [480. Sliding Window Median](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/480.%20Sliding%20Window%20Median.py) | Hard |
 | [Leecode](https://leetcode.com/problems/find-all-anagrams-in-a-string/)    |  [438. Find All Anagrams in a String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/438.%20Find%20All%20Anagrams%20in%20a%20String.py) | Medium |
-| [Leecode](https://leetcode.com/problems/permutation-in-string/)    |  [567. Permutation in String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/567.%20Permutation%20in%20String.py) | Medium |
+| [Leecode](https://leetcode.com/problems/permutation-in-string/)    |  [567. Permutation in String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/1004.%20Max%20Consecutive%20Ones%20III.py) | Medium |
 
 
 # Type 3: Minimum Window Substring/Subsequence
