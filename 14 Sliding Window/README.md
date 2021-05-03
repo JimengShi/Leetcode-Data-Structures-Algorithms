@@ -32,6 +32,7 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/minimum-size-subarray-sum/)    |  [209. Minimum Size Subarray Sum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/209.%20Minimum%20Size%20Subarray%20Sum.py) | Medium |
 | [Leecode](https://leetcode.com/problems/subarray-product-less-than-k/)    |  [713. Subarray Product Less Than K](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
 | [Leecode](https://leetcode.com/problems/max-consecutive-ones-iii/)    |  [1004. Max Consecutive Ones III](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
+| [Leecode](https://leetcode.com/problems/max-consecutive-ones-ii/)    |  [487. Max Consecutive Ones II](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/487.%20Max%20Consecutive%20Ones%20II.py) | Medium |
 
 
 # Type 2: Unchangeable Window Size
