@@ -34,7 +34,7 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/subarray-product-less-than-k/)    |  [713. Subarray Product Less Than K](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
 | [Leecode](https://leetcode.com/problems/max-consecutive-ones-iii/)    |  [1004. Max Consecutive Ones III](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
 | [Leecode](https://leetcode.com/problems/max-consecutive-ones-ii/)    |  [487. Max Consecutive Ones II](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/487.%20Max%20Consecutive%20Ones%20II.py) | Medium |
-
+| [Leecode](https://leetcode.com/problems/permutation-in-string/)    |  [567. Permutation in String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/1004.%20Max%20Consecutive%20Ones%20III.py) | Medium |
 
 
 # Type 2: Unchangeable Window Size
@@ -43,7 +43,7 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/sliding-window-maximum/)    |  [239. Sliding Window Maximum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/239.%20Sliding%20Window%20Maximum.py) | Hard |
 | [Leecode](https://leetcode.com/problems/sliding-window-median/)    |  [480. Sliding Window Median](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/480.%20Sliding%20Window%20Median.py) | Hard |
 | [Leecode](https://leetcode.com/problems/find-all-anagrams-in-a-string/)    |  [438. Find All Anagrams in a String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/438.%20Find%20All%20Anagrams%20in%20a%20String.py) | Medium |
-| [Leecode](https://leetcode.com/problems/permutation-in-string/)    |  [567. Permutation in String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/1004.%20Max%20Consecutive%20Ones%20III.py) | Medium |
+| [Leecode](https://leetcode.com/problems/maximum-average-subarray-i/)    |  [643. Maximum Average Subarray I](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/643.%20Maximum%20Average%20Subarray%20I.py) | Easy |
 
 
 
