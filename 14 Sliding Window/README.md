@@ -42,8 +42,9 @@ class Solution:
 |----------|:-------------|:------:|
 | [Leecode](https://leetcode.com/problems/sliding-window-maximum/)    |  [239. Sliding Window Maximum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/239.%20Sliding%20Window%20Maximum.py) | Hard |
 | [Leecode](https://leetcode.com/problems/sliding-window-median/)    |  [480. Sliding Window Median](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/480.%20Sliding%20Window%20Median.py) | Hard |
-| [Leecode](https://leetcode.com/problems/find-all-anagrams-in-a-string/)    |  [438. Find All Anagrams in a String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/438.%20Find%20All%20Anagrams%20in%20a%20String.py) | Medium |
 | [Leecode](https://leetcode.com/problems/maximum-average-subarray-i/)    |  [643. Maximum Average Subarray I](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/643.%20Maximum%20Average%20Subarray%20I.py) | Easy |
+| [Leecode](https://leetcode.com/problems/find-all-anagrams-in-a-string/)    |  [438. Find All Anagrams in a String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/438.%20Find%20All%20Anagrams%20in%20a%20String.py) | Medium |
+
 
 
 
