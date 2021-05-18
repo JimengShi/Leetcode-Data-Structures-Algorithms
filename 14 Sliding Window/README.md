@@ -33,7 +33,7 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/subarray-product-less-than-k/)    |  [713. Subarray Product Less Than K](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
 | [Leecode](https://leetcode.com/problems/max-consecutive-ones-iii/)    |  [1004. Max Consecutive Ones III](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/713.%20Subarray%20Product%20Less%20Than%20K.py) | Medium |
 | [Leecode](https://leetcode.com/problems/max-consecutive-ones-ii/)    |  [487. Max Consecutive Ones II](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/487.%20Max%20Consecutive%20Ones%20II.py) | Medium |
-| [Leecode](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)    |  1234. Replace the Substring for Balanced String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/1234.%20Replace%20the%20Substring%20for%20Balanced%20String.py) | Medium |
+| [Leecode](https://leetcode.com/problems/replace-the-substring-for-balanced-string/)    |  [1234. Replace the Substring for Balanced String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/1234.%20Replace%20the%20Substring%20for%20Balanced%20String.py) | Medium |
 
 
 
