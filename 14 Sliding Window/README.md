@@ -37,6 +37,7 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/max-consecutive-ones-ii/)    |  [487. Max Consecutive Ones II](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/487.%20Max%20Consecutive%20Ones%20II.py) | Medium |
 | [Leecode](https://leetcode.com/problems/permutation-in-string/)    |  [567. Permutation in String](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/1004.%20Max%20Consecutive%20Ones%20III.py) | Medium |
 | [Leecode](https://leetcode.com/problems/max-consecutive-ones/)    |  [485. Max Consecutive Ones](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/485.%20Max%20Consecutive%20Ones.py) | Easy |
+| [Leecode](https://leetcode.com/problems/implement-strstr/)    |  [28. Implement strStr()](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/28.%20Implement%20strStr().py) | Easy |
 
 
 # Type 2: Unchangeable Window Size
