@@ -1,6 +1,6 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        return self.atMostK(A, K) - self.atMostK(A, K - 1)
+        return self.atMostK(nums, k) - self.atMostK(nums, k-1)
     
     def atMostK(self, A: str, K: int) -> int:  # subarray with at most K different numbers
         # (0) edge case
