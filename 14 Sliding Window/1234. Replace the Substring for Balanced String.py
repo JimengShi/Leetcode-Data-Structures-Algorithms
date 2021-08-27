@@ -7,10 +7,10 @@ class Solution:
         
         # (1) count each character of string
         count = collections.Counter(s)           # O(n)
-        res = n = len(s)
+        min_len = n = len(s)
         l = 0
         
-        # (2) traverse the string
+        # (2) replace and update the dictionary state
         for r, item in enumerate(s):             # O(n)
             
             # (2.1) find the first window candidate
@@ -18,12 +18,12 @@ class Solution:
             
             # (2.2) minimize the window size   --->  greedy
             while l < n and count['Q'] <= n/4 and count['W'] <= n/4 and count['E'] <= n/4 and count['R'] <= n/4: # (2.2)
-                res = min(res, r - l + 1)
+                min_len = min(res, r-l+1)
                 count[s[l]] += 1
                 l += 1
                 
         # (3) return the result
-        return res
+        return min_len
     
 # Time: O(n)
 # Space: O(1)
