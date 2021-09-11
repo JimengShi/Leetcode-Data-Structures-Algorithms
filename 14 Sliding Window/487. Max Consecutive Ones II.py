@@ -1,57 +1,44 @@
-# Method 1:
+# Method 1: brute force
+# Check every possible consecutive sequence
+# Count how many 0's are in each sequence
+# If sequence has one or fewer 0's, check if that's the longest consecutive sequence of 1's.
 class Solution:
-    def findMaxConsecutiveOnes(self, nums):
-        return self.longestOnes(nums, 1)
-
-    def longestOnes(self, A, K):
-        # (0) edge case
-        if not A:
-            return 0
-        
-        # (1) initialize two points and count
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        len_longest_sequence = 0
+        for l in range(len(nums)):
+            num_zeroes = 0
+            for r in range(l, len(nums)):      # check every consecutive sequence
+                if num_zeroes == 2:
+                    break
+                if nums[r] == 0:               # count how many 0's
+                    num_zeroes += 1
+                if num_zeroes <= 1:            # update answer if it's valid
+                    len_longest_sequence = max(len_longest_sequence, r-l+1)
+        return len_longest_sequence
+    
+    
+    
+# Method 2: sliding window
+class Solution:
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        return self.findMaxConsecutiveOnesWithKTimes(nums, 1)
+    
+    def findMaxConsecutiveOnesWithKTimes(self, A, k):
+        max_num = 0
         l = 0
-        res = 0
         count = 0
         
-        # (2) traverse
         for r in range(len(A)):
-            if A[r] == 0:          # (2.1) count number of 0
+            if A[r] == 0:
                 count += 1
                 
-            while count > K:       # (2.2) shrink window when count > K
+            while count > k:
                 if A[l] == 0:
                     count -= 1
                 l += 1
-                
-            res = max(res, r-l+1)  # (2.3) update result
-        
-        # (3) return result
-        return res
+            max_num = max(max_num, r-l+1)
+            
+        return max_num
     
 # Time: O(N), visit every element of array twice, once by left pointer and once by right pointer.
 # Space: O(1), We do not use any extra space.
-
-
-# Method 2:
-class Solution(object):
-    def findMaxConsecutiveOnes(self, nums):
-        # (1) initialize the pre (count consecutive 1's before 0)
-        # (1) initialize the curr (count consecutive 1's after 0)
-        pre, curr = -1, 0
-        max_len = 0
-        
-        # (2) traverse the nums
-        for num in nums:
-            if num == 0:
-                pre = curr
-                curr = 0
-            else:
-                curr += 1
-                
-            max_len = max(max_len, pre + 1 + curr )
-        
-        # (3) return the result
-        return max_len
-    
-# Time: O(n)
-# Space: O(1)
