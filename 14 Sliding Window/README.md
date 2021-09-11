@@ -5,7 +5,7 @@ class Solution:
     def functionName(self, s, k):
         # (1) initialization
         l = 0
-        count_dict = {}
+        count_dict = {}      # data strucuture here can be changed to others, such as set (e.g., Q3) or list (e.g., Q424).
         max_len = 0
         
         # (2) traverse the string or array to count
@@ -16,11 +16,12 @@ class Solution:
                 if count_dict[s[l]] == 0:
                     del count_dict[s[l]]
                 l += 1
-            max_len = max(max_len, r-l+1)                     # (2.2) window condition is satisfied
+            max_len = max(max_len, r-l+1)                     # (2.2) window condition is satisfied. here can be changed to count_num += r-l+1 (e.g., Q992)
             
         # (3) return the result
         return max_len
 ```
+
 
 | Question |    Solution   |  Difficulty |
 |----------|:-------------|:------:|
