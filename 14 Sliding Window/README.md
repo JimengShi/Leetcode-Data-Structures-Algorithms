@@ -41,6 +41,8 @@ class Solution:
 | [Leecode](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)    |  [674. Longest Continuous Increasing Subsequence](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/674.%20Longest%20Continuous%20Increasing%20Subsequence.py) | Easy |
 | [Leecode](https://leetcode.com/problems/implement-strstr/)    |  [28. Implement strStr()](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/28.%20Implement%20strStr().py) | Easy |
 | [Leecode](https://leetcode.com/problems/binary-subarrays-with-sum/)    |  [930. Binary Subarrays With Sum](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/930.%20Binary%20Subarrays%20With%20Sum.py) | Easy |
+| [Leecode](https://leetcode.com/problems/subarray-sum-equals-k/)    |  [560. Subarray Sum Equals K](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/560.%20Subarray%20Sum%20Equals%20K.py) | Midium |
+| [Leecode](https://leetcode.com/problems/maximum-subarray/)    |  [53. Maximum Subarray](https://github.com/JimengShi/Leetcode-Data-Structures-Algorithms/blob/master/14%20Sliding%20Window/53.%20Maximum%20Subarray.py) | Easy |
 
 
 # Type 2: Unchangeable Window Size
